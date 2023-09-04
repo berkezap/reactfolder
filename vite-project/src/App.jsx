@@ -14,7 +14,7 @@ function App() {
       {/* ? den sonra gelen true olduğunda, : dan sonra gelen false olduğunda çalışır */}
       {dogruMu ? <p>Öğrenci Sayisi </p> :  <h1>İsim Soyisim :</h1>}
 
-
+      <p>deneme</p>
       <input type="text" />
       <input type="date" />
     </div>
