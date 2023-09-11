@@ -1,5 +1,6 @@
 import Course from "./Course";
 import { useState } from "react";
+import "./App.css";
 
 function getRandomCourse() {
   const courseArray = ["Angular", "Bootstrap", "Ccsharp", "Kompleweb"];
@@ -19,8 +20,10 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleClick}>Kurs Ekle</button>
-      <div>{courseList}</div>
+      <button className="appButton" onClick={handleClick}>
+        Kurs Ekle
+      </button>
+      <div className="courseList">{courseList}</div>
     </div>
   );
 }
