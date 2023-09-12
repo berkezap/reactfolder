@@ -1,0 +1,14 @@
+.App {
+  margin: 10px;
+}
+
+.searchDiv {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+.searchDiv form {
+  display: flex;
+  flex-direction: column;
+}
