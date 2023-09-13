@@ -2,7 +2,7 @@ import ImageItem from "./imageItem";
 
 function ImageList({ imagesPlaceholder }) {
   return (
-    <div>
+    <div className="imageList">
       {imagesPlaceholder.map((image, index) => {
         return <ImageItem key={index} image={image} />;
       })}

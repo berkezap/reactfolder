@@ -12,3 +12,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.imageList {
+  columns: 250px 5;
+  column-gap: 10;
+}
+
+.imageListImg {
+  width: 100%;
+  margin-top: 10px;
+}
