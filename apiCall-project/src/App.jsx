@@ -1,30 +1,19 @@
 import "./App.css";
-import SearchHeader from "./searchHeader";
-import axios from "axios";
+import SearchHeader from "./SearchHeader";
+import searchImages from "./api";
+import { useState } from "react";
+import ImageList from "./components/imageList";
 
 function App() {
-  const searchImages = async (term) => {
-    const response = await axios.get("https://api.unsplash.com/search/photos", {
-      headers: {
-        Authorization: "Cliend-ID _LRWeda79bfzmBtHKfdP5-JNQUdQarBo-iiykhD1MIs",
-      },
-      params: {
-        query: term,
-      },
-    });
-    debugger;
-    return response.data.results;
+  const [images, setImages] = useState([]);
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term);
+    setImages(result);
   };
-
-  const handleSubmit = (term) => {
-    debugger;
-    console.log(term);
-    searchImages(term);
-  };
-
   return (
     <div className="App">
       <SearchHeader search={handleSubmit} />
+      <ImageList imagesPlaceholder={images} />
     </div>
   );
 }
